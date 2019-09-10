@@ -4,4 +4,7 @@ import jc.highapp.jccv.architecture.BaseViewModel
 
 class GeneralViewModel : BaseViewModel<GeneralState>() {
 
+    fun onInit() {
+
+    }
 }
