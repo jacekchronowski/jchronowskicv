@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Jacek Chronowski CV App</string>
+    <string name="bottom_navigation_general_title">General</string>
+    <string name="bottom_navigation_experience_title">Experience</string>
+    <string name="bottom_navigation_portfolio_title">Portfolio</string>
 </resources>

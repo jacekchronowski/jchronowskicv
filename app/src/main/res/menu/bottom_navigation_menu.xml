@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bn_general"
+        android:icon="@drawable/ic_general"
+        android:title="@string/bottom_navigation_general_title" />
+
+    <item
+        android:id="@+id/bn_experience"
+        android:icon="@drawable/ic_experience"
+        android:title="@string/bottom_navigation_experience_title" />
+
+    <item
+        android:id="@+id/bn_portfolio"
+        android:icon="@drawable/ic_portfolio"
+        android:title="@string/bottom_navigation_portfolio_title" />
+
+</menu>
