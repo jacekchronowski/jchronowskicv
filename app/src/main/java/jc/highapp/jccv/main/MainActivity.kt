@@ -1,7 +1,8 @@
-package jc.highapp.jccv
+package jc.highapp.jccv.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import jc.highapp.jccv.R
 
 class MainActivity : AppCompatActivity() {
 

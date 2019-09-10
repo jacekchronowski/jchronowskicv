@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 apply from: '../dependencies.gradle'
 
 def config = rootProject.extensions.getByName("ext")
@@ -26,10 +27,20 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation kotlinDependencies.kotlin
+    implementation kotlinDependencies.coroutines
+    implementation kotlinDependencies.coroutinesAndroid
+
     implementation androidxDependencies.appcompat
     implementation androidxDependencies.ktx
     implementation androidxDependencies.constraintLayout
+
+    implementation materialDependencies.material
+
+    implementation archComponentsDependencies.lifecycle
+    kapt archComponentsDependencies.lifecycleCompiler
+
     testImplementation testDependencies.junit
+
     androidTestImplementation androidTestDependencies.testRunner
     androidTestImplementation androidTestDependencies.espressoCore
 }
