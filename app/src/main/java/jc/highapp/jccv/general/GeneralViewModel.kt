@@ -1,7 +1,7 @@
 package jc.highapp.jccv.general
 
-import androidx.lifecycle.ViewModel
+import jc.highapp.jccv.architecture.BaseViewModel
 
-class GeneralViewModel : ViewModel() {
+class GeneralViewModel : BaseViewModel<GeneralState>() {
 
 }

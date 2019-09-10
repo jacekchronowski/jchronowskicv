@@ -26,13 +26,15 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation kotlinDependencies.kotlin
     implementation kotlinDependencies.coroutines
     implementation kotlinDependencies.coroutinesAndroid
+    implementation kotlinDependencies.ktx
+    implementation kotlinDependencies.fragmentKtx
 
-    implementation androidxDependencies.appcompat
-    implementation androidxDependencies.ktx
-    implementation androidxDependencies.constraintLayout
+    implementation supportDependencies.appcompat
+    implementation supportDependencies.constraintLayout
 
     implementation daggerDependencies.dagger
     kapt daggerDependencies.daggerCompiler
