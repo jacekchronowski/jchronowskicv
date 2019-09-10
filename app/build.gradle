@@ -34,6 +34,12 @@ dependencies {
     implementation androidxDependencies.ktx
     implementation androidxDependencies.constraintLayout
 
+    implementation daggerDependencies.dagger
+    kapt daggerDependencies.daggerCompiler
+    implementation daggerDependencies.daggerAndroid
+    implementation daggerDependencies.daggerAndroidSupport
+    kapt daggerDependencies.daggerAndroidProcessor
+
     implementation materialDependencies.material
 
     implementation archComponentsDependencies.lifecycle
