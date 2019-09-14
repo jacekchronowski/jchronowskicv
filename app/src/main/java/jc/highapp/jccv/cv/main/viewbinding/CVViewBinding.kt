@@ -11,7 +11,7 @@ class CVViewBinding : BaseViewBinding() {
         val activity = view.context as MainActivity
         val fragmentManager = activity.supportFragmentManager
 
-        view.vp_cv_pages.adapter = CvFragmentAdapter(fragmentManager)
+        view.vp_cv_pages.adapter = CvFragmentAdapter(activity.resources, fragmentManager)
         view.tl_tabs.setupWithViewPager(view.vp_cv_pages)
     }
 }

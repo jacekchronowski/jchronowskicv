@@ -6,6 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        style="@style/CVTitleTextStyle"
         android:text="@string/bottom_navigation_cv_title"/>
 
     <androidx.viewpager.widget.ViewPager

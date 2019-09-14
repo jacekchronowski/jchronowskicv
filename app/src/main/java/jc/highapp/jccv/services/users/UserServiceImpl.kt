@@ -3,7 +3,7 @@ package jc.highapp.jccv.services.users
 import android.content.Context
 import com.google.gson.Gson
 import jc.highapp.jccv.services.model.Language
-import jc.highapp.jccv.services.model.Skill
+import jc.highapp.jccv.services.model.PersonalSkill
 import jc.highapp.jccv.services.model.Tool
 import jc.highapp.jccv.services.model.User
 import jc.highapp.jccv.utils.Settings
@@ -32,7 +32,7 @@ class UserServiceImpl(context : Context, private val gson : Gson) : UserService 
         return listOf()
     }
 
-    override suspend fun getUserSkills(userId: String): List<Skill> {
+    override suspend fun getUserPersonalSkills(userId: String): List<PersonalSkill> {
         return listOf()
     }
 

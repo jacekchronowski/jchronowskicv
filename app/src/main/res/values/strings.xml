@@ -10,4 +10,7 @@
     <string name="email">E-mail</string>
     <string name="skype">Skype</string>
     <string name="facebook">Facebook</string>
+    <string name="skills_title">SKILLS</string>
+    <string name="experience_title">EXPERIENCE</string>
+    <string name="education_title">EDUCATION</string>
 </resources>
