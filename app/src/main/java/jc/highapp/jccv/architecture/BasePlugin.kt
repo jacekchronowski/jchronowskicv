@@ -1,16 +1,19 @@
 package jc.highapp.jccv.architecture
 
 import android.view.View
+import java.lang.IllegalStateException
 
 abstract class BasePlugin {
 
-    private var view : View? = null
+    private var _view : View? = null
+    protected val view : View
+        get() = _view ?: throw IllegalStateException()
 
     fun attachView(view : View?) {
-        this.view = view
+        this._view = view
     }
 
     fun detachView() {
-        this.view = null
+        this._view = null
     }
 }

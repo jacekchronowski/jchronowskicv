@@ -6,9 +6,9 @@
         android:title="@string/bottom_navigation_general_title" />
 
     <item
-        android:id="@+id/bn_experience"
+        android:id="@+id/bn_cv"
         android:icon="@drawable/ic_experience"
-        android:title="@string/bottom_navigation_experience_title" />
+        android:title="@string/bottom_navigation_cv_title" />
 
     <item
         android:id="@+id/bn_portfolio"

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View style="@style/UserListDividerStyle"
+    android:paddingTop="@dimen/user_list_divider_padding"
+    android:paddingBottom="@dimen/user_list_divider_padding"
+    android:paddingStart="@dimen/user_list_divider_padding"
+    android:paddingEnd="@dimen/user_list_divider_padding"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

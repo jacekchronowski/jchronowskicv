@@ -44,6 +44,9 @@ dependencies {
 
     implementation materialDependencies.material
 
+    implementation commonDependencies.gson
+    implementation commonDependencies.adapterDelegates
+
     implementation archComponentsDependencies.lifecycle
     kapt archComponentsDependencies.lifecycleCompiler
 

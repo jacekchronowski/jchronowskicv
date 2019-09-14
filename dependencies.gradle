@@ -8,7 +8,7 @@ ext {
 
     gradle_version = '3.5.0'
 
-    kotlin_version = '1.3.50'
+    kotlin_version = '1.3.41'
     coroutines_version = '1.1.1'
     fragment_ktx_version = '1.1.0'
     ktx_version = '1.1.0'
@@ -26,9 +26,18 @@ ext {
 
     dagger_version = '2.22.1'
 
+    gson_version = '2.8.5'
+    adapter_delegates_version = '4.2.0'
+
     classpaths = [
             gradle            : "com.android.tools.build:gradle:$gradle_version",
             kotlinGradlePlugin: "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    ]
+
+    commonDependencies = [
+            gson            : "com.google.code.gson:gson:$gson_version",
+            adapterDelegates: "com.hannesdorfmann:adapterdelegates4:$adapter_delegates_version"
+
     ]
 
     supportDependencies = [
