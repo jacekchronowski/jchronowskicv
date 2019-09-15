@@ -4,4 +4,4 @@ import jc.highapp.jccv.architecture.BaseState
 
 data class CVState(
     val isLoading : Boolean = false,
-    val skills : List<CVItem> = listOf()) : BaseState
+    val items : List<CVItem> = listOf()) : BaseState

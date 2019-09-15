@@ -29,9 +29,24 @@ class CVInteractor @Inject constructor(
                     it.companyName,
                     it.companyImageUrl) })
                 addAll(programmingLanguages.await().map { CVItem.UserProgrammingLanguageItem(it.languageName, it.languageLevel) })
-                add(CVItem.UserToolItem(tools.await().map { it.toolName }))
+
+                tools.await()
+                    .map { it.toolName }
+                    .takeIf { it.isNotEmpty() }
+                    ?.let {
+                        add( CVItem.UserToolItem(it))
+                    }
+
                 addAll(languages.await().map { CVItem.UserLanguageItem(it.languageName, it.languageLevel) })
-                add(CVItem.UserPersonalSkill(skills.await().map { it.skillName }))
+
+                skills.await()
+                    .map { it.skillName }
+                    .takeIf { it.isNotEmpty() }
+                    ?.let {
+                        add(CVItem.UserPersonalSkill(it))
+                    }
+
+
             }
         }
     }

@@ -15,7 +15,7 @@ class CVViewModel @Inject constructor(
             state.value = CVState(isLoading = true)
             state.value = CVState(
                 isLoading = false,
-                skills = asyncIo { CVInteractor.execute() })
+                items = asyncIo { CVInteractor.execute() })
         }
     }
 

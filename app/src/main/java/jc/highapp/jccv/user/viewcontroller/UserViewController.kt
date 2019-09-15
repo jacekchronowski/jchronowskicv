@@ -4,13 +4,12 @@ import jc.highapp.jccv.architecture.BaseViewController
 import jc.highapp.jccv.plugins.BottomNavigationPlugin
 import jc.highapp.jccv.plugins.LoadingPlugin
 import jc.highapp.jccv.user.binding.UserViewBinding
-import jc.highapp.jccv.user.viewmodel.UserViewModel
 import jc.highapp.jccv.user.model.UserState
+import jc.highapp.jccv.user.viewmodel.UserViewModel
 
-class UserViewController : BaseViewController<UserViewBinding, UserState, UserViewModel>() {
-
-    private val loadingPlugin = LoadingPlugin()
-    private val bottomNavigationPlugin = BottomNavigationPlugin()
+class UserViewController(
+    private val loadingPlugin: LoadingPlugin = LoadingPlugin(),
+    private val bottomNavigationPlugin : BottomNavigationPlugin = BottomNavigationPlugin()) : BaseViewController<UserViewBinding, UserState, UserViewModel>() {
 
     override fun setupView() {
         setupPlugins()

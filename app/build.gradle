@@ -52,6 +52,11 @@ dependencies {
     kapt archComponentsDependencies.lifecycleCompiler
 
     testImplementation testDependencies.junit
+    testImplementation testDependencies.mockk
+    testImplementation testDependencies.coroutinesTest
+    testImplementation testDependencies.androidArchCoreTesting
+    testImplementation   kotlinDependencies.coroutines
+
 
     androidTestImplementation androidTestDependencies.testRunner
     androidTestImplementation androidTestDependencies.espressoCore

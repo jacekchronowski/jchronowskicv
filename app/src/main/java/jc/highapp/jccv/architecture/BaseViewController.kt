@@ -18,7 +18,7 @@ abstract class BaseViewController<VB : BaseViewBinding, S : BaseState, VM : Base
     protected val viewBinding : VB
         get() = _viewBinding ?: throw IllegalStateException()
 
-    private val plugins : MutableList<BasePlugin> = mutableListOf()
+    val plugins : MutableList<BasePlugin> = mutableListOf()
 
     fun attachViewModel(viewModel: VM) {
         _viewModel = viewModel
