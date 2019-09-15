@@ -42,7 +42,8 @@ dependencies {
     implementation daggerDependencies.daggerAndroidSupport
     kapt daggerDependencies.daggerAndroidProcessor
 
-    implementation materialDependencies.material
+    implementation uiDependencies.material
+    implementation uiDependencies.flexbox
 
     implementation commonDependencies.gson
     implementation commonDependencies.adapterDelegates

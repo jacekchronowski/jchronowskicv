@@ -1,0 +1,17 @@
+[
+  {
+    "languageId": "1",
+    "languageName": "Java",
+    "languageLevel": 4
+  },
+  {
+    "languageId": "2",
+    "languageName": "Kotlin",
+    "languageLevel": 4
+  },
+  {
+    "languageId": "3",
+    "languageName": "Scala",
+    "languageLevel": 3
+  }
+]

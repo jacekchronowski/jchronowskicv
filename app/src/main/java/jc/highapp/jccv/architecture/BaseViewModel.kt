@@ -9,8 +9,9 @@ import kotlinx.coroutines.cancel
 
 abstract class BaseViewModel<S : BaseState> : ViewModel() {
 
-    protected val ioScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
-    protected val uiScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+    internal val ioScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+    internal val uiScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+
 
     val state: MutableLiveData<S> = MutableLiveData()
 

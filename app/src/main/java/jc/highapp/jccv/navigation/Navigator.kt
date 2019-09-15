@@ -1,6 +1,6 @@
 package jc.highapp.jccv.navigation
 
-import jc.highapp.jccv.cv.main.view.CVFragment
+import jc.highapp.jccv.cv.view.CVFragment
 import jc.highapp.jccv.main.MainActivity
 import jc.highapp.jccv.portfolio.PortfolioFragment
 import jc.highapp.jccv.user.view.UserFragment

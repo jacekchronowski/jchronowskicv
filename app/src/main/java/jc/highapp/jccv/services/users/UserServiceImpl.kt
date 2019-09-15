@@ -2,38 +2,85 @@ package jc.highapp.jccv.services.users
 
 import android.content.Context
 import com.google.gson.Gson
-import jc.highapp.jccv.services.model.Language
-import jc.highapp.jccv.services.model.PersonalSkill
-import jc.highapp.jccv.services.model.Tool
-import jc.highapp.jccv.services.model.User
 import jc.highapp.jccv.utils.Settings
 import jc.highapp.jccv.utils.loadJsonFileFromAssets
 import kotlinx.coroutines.delay
+import com.google.gson.reflect.TypeToken
+import jc.highapp.jccv.services.model.*
 
-class UserServiceImpl(context : Context, private val gson : Gson) : UserService {
+
+class UserServiceImpl(context: Context, private val gson: Gson) : UserService {
+
     private val applicationContext = context.applicationContext
 
     override suspend fun getUserData(userId: String): User {
         delay(1000)
-        val json : String = applicationContext.loadJsonFileFromAssets(
-            when(userId) {
+        val json: String = applicationContext.loadJsonFileFromAssets(
+            when (userId) {
                 Settings.CURRENT_USER_ID -> "currentUser.json"
                 else -> throw IllegalStateException()
-            })
+            }
+        )
 
         return gson.fromJson(json, User::class.java)
     }
 
     override suspend fun getUserTools(userId: String): List<Tool> {
-        return listOf()
+        delay(1000)
+        val json: String = applicationContext.loadJsonFileFromAssets(
+            when (userId) {
+                Settings.CURRENT_USER_ID -> "currentUserTools.json"
+                else -> throw IllegalStateException()
+            }
+        )
+
+        return gson.fromJson(json, object : TypeToken<List<Tool>>() {}.type)
     }
 
     override suspend fun getUserLanguages(userId: String): List<Language> {
-        return listOf()
+        delay(1000)
+        val json: String = applicationContext.loadJsonFileFromAssets(
+            when (userId) {
+                Settings.CURRENT_USER_ID -> "currentUserLanguages.json"
+                else -> throw IllegalStateException()
+            }
+        )
+
+        return gson.fromJson(json, object : TypeToken<List<Language>>() {}.type)
     }
 
     override suspend fun getUserPersonalSkills(userId: String): List<PersonalSkill> {
-        return listOf()
+        delay(1000)
+        val json: String = applicationContext.loadJsonFileFromAssets(
+            when (userId) {
+                Settings.CURRENT_USER_ID -> "currentUserSkills.json"
+                else -> throw IllegalStateException()
+            }
+        )
+
+        return gson.fromJson(json, object : TypeToken<List<PersonalSkill>>() {}.type)
     }
 
+    override suspend fun getUserProgrammingLanguages(userId: String): List<ProgrammingLanguage> {
+        delay(1000)
+        val json: String = applicationContext.loadJsonFileFromAssets(
+            when (userId) {
+                Settings.CURRENT_USER_ID -> "currentUserProgrammingLanguages.json"
+                else -> throw IllegalStateException()
+            }
+        )
+
+        return gson.fromJson(json, object : TypeToken<List<ProgrammingLanguage>>() {}.type)
+    }
+
+    override suspend fun getUserExperience(userId: String): List<Experience> {
+        delay(1000)
+        val json: String = applicationContext.loadJsonFileFromAssets(
+            when (userId) {
+                Settings.CURRENT_USER_ID -> "currentUserExperience.json"
+                else -> throw IllegalStateException()
+            }
+        )
+
+        return gson.fromJson(json, object : TypeToken<List<Experience>>() {}.type)    }
 }

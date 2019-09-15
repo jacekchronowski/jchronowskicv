@@ -5,10 +5,7 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.android.AndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
-import jc.highapp.jccv.cv.education.di.EducationModule
-import jc.highapp.jccv.cv.experience.di.ExperienceModule
-import jc.highapp.jccv.cv.main.di.CVModule
-import jc.highapp.jccv.cv.skills.di.SkillsModule
+import jc.highapp.jccv.cv.di.CvModule
 import jc.highapp.jccv.main.JcCvApplication
 import jc.highapp.jccv.portfolio.PorfolioModule
 import jc.highapp.jccv.services.di.ServiceModule
@@ -23,12 +20,10 @@ import javax.inject.Singleton
         AndroidSupportInjectionModule::class,
         UserModule::class,
         ServiceModule::class,
-        CVModule::class,
-        SkillsModule::class,
-        ExperienceModule::class,
-        EducationModule::class,
+        CvModule::class,
         PorfolioModule::class
-    ])
+    ]
+)
 interface ApplicationComponent : AndroidInjector<JcCvApplication> {
 
     @Component.Factory

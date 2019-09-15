@@ -23,6 +23,7 @@ ext {
 
     material_version = '1.0.0'
     lifecycle_version = '2.0.0'
+    flexbox_layout_version = '1.1.0'
 
     dagger_version = '2.22.1'
 
@@ -58,8 +59,9 @@ ext {
             daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:$dagger_version"
     ]
 
-    materialDependencies = [
-            material: "com.google.android.material:material:$material_version"
+    uiDependencies = [
+            material: "com.google.android.material:material:$material_version",
+            flexbox : "com.google.android:flexbox:$flexbox_layout_version"
     ]
 
     kotlinDependencies = [

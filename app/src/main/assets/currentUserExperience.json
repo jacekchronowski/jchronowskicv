@@ -1,0 +1,30 @@
+[
+  {
+    "experienceId": "1",
+    "experienceStart": "VI 2018",
+    "experienceEnd": null,
+    "companyImageUrl" : "",
+    "companyName": "Instagram"
+  },
+  {
+    "experienceId": "2",
+    "experienceStart": "III 2016",
+    "experienceEnd": "V 2018",
+    "companyImageUrl" : "",
+    "companyName": "Snapchat"
+  },
+  {
+    "experienceId": "3",
+    "experienceStart": "I 2015",
+    "experienceEnd": "II 2016",
+    "companyImageUrl" : "",
+    "companyName": "Facebook"
+  },
+  {
+    "experienceId": "4",
+    "experienceStart": "II 2014",
+    "experienceEnd": "XII 2014",
+    "companyImageUrl" : "",
+    "companyName": "Google"
+  }
+]

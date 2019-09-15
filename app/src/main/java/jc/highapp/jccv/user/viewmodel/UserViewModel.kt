@@ -6,6 +6,8 @@ import jc.highapp.jccv.user.interactor.UserInteractor
 import jc.highapp.jccv.user.model.UserAction
 import jc.highapp.jccv.user.model.UserListItem
 import jc.highapp.jccv.user.model.UserState
+import jc.highapp.jccv.utils.launchIo
+import jc.highapp.jccv.utils.launchUi
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -14,13 +16,13 @@ class UserViewModel @Inject constructor(
     private val authService : AuthService): BaseViewModel<UserState>() {
 
     fun onInit() {
-        uiScope.launch {
+        launchUi {
             state.value = UserState(isLoading = true)
         }
-        ioScope.launch {
+        launchIo {
             val data = userInteractor.execute(authService.getCurrentUserId()
                 ?: throw IllegalStateException("User cannot be null at this point!"))
-            uiScope.launch {
+            launchUi {
                 state.value = UserState(isLoading = false, items = data)
             }
         }
